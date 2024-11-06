@@ -5,7 +5,7 @@
   const hotspots = document.querySelectorAll(".Hotspot");
 
   const infoBoxes = [
-    {title: 'Test1', text: 'testing 123', image: 'images/test.png'},
+    {title: 'Test1', text: 'testing 123', image: 'images/ar_hand_prompt.png'},
     {title: 'Test2', text: 'testing 123', image: 'images/test.png'},
     {title: 'Test3', text: 'testing 123', image: 'images/test.png'},
     {title: 'Test4', text: 'testing 123', image: 'images/test.png'},
@@ -26,9 +26,10 @@
       hotspotImage = document.createElement('img');
       hotspotImage.src = infoBox.image;
 
+      selected.appendChild(hotspotImage);
       selected.appendChild(hotspotTitle);
       selected.appendChild(hotspotText);
-      selected.appendChild(hotspotImage);
+
 
     });
   }
