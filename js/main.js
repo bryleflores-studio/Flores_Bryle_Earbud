@@ -1,56 +1,60 @@
 (() => {
-    console.log("IIFE Fired");
-    
-  //1 variables first selecting all classes
-    const hotspots = document.querySelectorAll(".Hotspot");
-    console.log(hotspots);
-  //2 will show all nodes in console (how many buttons)
-  
-  //3 there are many variables so I need a loop (for each)
-  
-  //5 functions
-    // function showInfo() {
-    //   //check if working
-    //   console.log("showInfo called"); 
-    // }
-  
-    function showInfo(e) {
-      console.log(e.currentTarget.slot); 
-      //e will show x and y axis
-      //currentTarget will show html line
-      //slot will show directly the element
-      let selected = document.querySelector(`button[slot="${e.currentTarget.slot}"] > div`);
-      //button[slot="hotspot-4" > div]
-      gsap.to(selected, 1, {autoAlpha: 1});
-      //copy to hide info
-  
-      let name = "Bryle";
-      //old string syntax
-      console.log("Hello my name is" + name);
-      //es6 template litereals (for spacing)
-      console.log(`
-        Hello my
-         name is
-          ${name}`);
-  
-    }
-  
-    function hideInfo(e) {
-      console.log("hideInfo called");
-      let selected = document.querySelector(`button[slot="${e.currentTarget.slot}"] > div`);
-      gsap.to(selected, 1, {autoAlpha: 0});
-    }
-  
-    //5a  add element inside parenthesis ('e') or any
-  
-  //4 event listeners
-  
-  hotspots.forEach(hotspot => {
-    hotspot.addEventListener("mouseover", showInfo);
-    hotspot.addEventListener("mouseout", hideInfo);
-  })
-  
-  //4a  hotspot = temporary placeholder then add function =>
-  //4b  hotspot name can be any but has to match hotspot.addEventListener
-  
-  })();
+
+  //variables
+  const model = document.querySelector("#model");
+  const hotspots = document.querySelectorAll(".Hotspot");
+
+  const infoBoxes = [
+    {title: 'Test1', text: 'testing 123', image: 'images/test.png'},
+    {title: 'Test2', text: 'testing 123', image: 'images/test.png'},
+    {title: 'Test3', text: 'testing 123', image: 'images/test.png'},
+    {title: 'Test4', text: 'testing 123', image: 'images/test.png'},
+    {title: 'Test5', text: 'testing 123', image: 'images/test.png'},
+  ];
+
+  function loadInfo() {
+    infoBoxes.forEach((infoBox, index)=> {
+
+      let selected = document.querySelector(`#hotspot-${index+1}`);
+
+      hotspotTitle = document.createElement('h2');
+      hotspotTitle.textContent = infoBox.title;
+
+      hotspotText = document.createElement('p');
+      hotspotText.textContent = infoBox.text;
+
+      hotspotImage = document.createElement('img');
+      hotspotImage.src = infoBox.image;
+
+      selected.appendChild(hotspotTitle);
+      selected.appendChild(hotspotText);
+      selected.appendChild(hotspotImage);
+
+    });
+  }
+
+  // loadInfo();
+  function modelLoaded() {
+    loadInfo();
+  }
+
+  function showInfo() {
+    let selected = document.querySelector(`#${this.slot}`);
+    gsap.to(selected, 1, { autoAlpha: 1 });
+  }
+
+  function hideInfo() {
+    let selected = document.querySelector(`#${this.slot}`);
+    gsap.to(selected, 1, { autoAlpha: 0 });
+  }
+
+  //Event listeners
+  model.addEventListener("load", modelLoaded);
+
+  hotspots.forEach(function (hotspot) {
+    hotspot.addEventListener("mouseenter", showInfo);
+    hotspot.addEventListener("mouseleave", hideInfo);
+  });
+
+})();
+

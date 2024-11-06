@@ -10,18 +10,29 @@
   </head>
   <body>
     <!-- <model-viewer> HTML element -->
-      <model-viewer src="model/earbud-model.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="0.73" exposure="0.83">
-        <button class="Hotspot" slot="hotspot-2" data-position="0.005841734626967465m 0.27103248127993673m 0.19796179910924638m" data-normal="2.4492937051703357e-16m 3.126511277583096e-39m 1m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation">Smart Connection</div>
-        </button><button class="Hotspot" slot="hotspot-5" data-position="-0.19168639993258374m 0.1943081765013318m 0.10404273213968884m" data-normal="0.8667368531509941m -0.4987645731857501m -0.0010620380164685075m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation">Weatherproof Audio</div>
-        </button><button class="Hotspot" slot="hotspot-7" data-position="0.13127696077112933m 0.3187511145044424m -0.0022176994731852306m" data-normal="-0.8664629547992987m -0.49922953913991197m -0.0034373260857274972m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation">Lasting Power</div>
-        </button><button class="Hotspot" slot="hotspot-8" data-position="0.0599942524326173m 0.27431610424426506m -0.639528814415697m" data-normal="-0.36749885875242266m -0.617690203318525m 0.6952721780281348m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation">Supreme Comfort</div>
-        </button><button class="Hotspot" slot="hotspot-11" data-position="-0.3319212151414095m 0.16065243493679787m -0.4091413558267874m" data-normal="0.9670363678087703m -0.24116524053875366m -0.08173120634803918m" data-visibility-attribute="visible">
-            <div class="HotspotAnnotation">Immersive Sound</div>
+      <model-viewer id="model" src="model/earbud-model.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="0.73" exposure="0.83">
+
+        <button class="Hotspot" slot="hotspot-1" data-position="0.005841734626967465m 0.27103248127993673m 0.19796179910924638m" data-normal="2.4492937051703357e-16m 3.126511277583096e-39m 1m" data-visibility-attribute="visible">
+        <div id="hotspot-1" class="HotspotAnnotation"></div>
+      </button>
+        
+        <button class="Hotspot" slot="hotspot-2" data-position="-0.19168639993258374m 0.1943081765013318m 0.10404273213968884m" data-normal="-0.8667368531509941m -0.4987645731857501m -0.0010620380164685075m" data-visibility-attribute="visible">
+            <div id="hotspot-2" class="HotspotAnnotation"></div>
+           </button>
+        
+        <button class="Hotspot" slot="hotspot-3" data-position="0.13127696077112933m 0.3187511145044424m -0.0022176994731852306m" data-normal="0.8664629547992987m -0.49922953913991197m -0.0034373260857274972m" data-visibility-attribute="visible">
+            <div id="hotspot-3"  class="HotspotAnnotation"></div>
         </button>
+        
+        <button class="Hotspot" slot="hotspot-4" data-position="0.0599942524326173m 0.27431610424426506m -0.639528814415697m" data-normal="-0.36749885875242266m -0.617690203318525m -0.6952721780281348m" data-visibility-attribute="visible">
+            <div id="hotspot-4"  class="HotspotAnnotation"></div>
+        </button>
+        
+        <button class="Hotspot" slot="hotspot-5" data-position="-0.3319212151414095m 0.16065243493679787m -0.4091413558267874m" data-normal="-0.9670363678087703m -0.24116524053875366m -0.08173120634803918m" data-visibility-attribute="visible">
+            <div id="hotspot-5"  class="HotspotAnnotation"></div>
+        </button>
+
+
         <div class="progress-bar hide" slot="progress-bar">
             <div class="update-bar"></div>
         </div>
