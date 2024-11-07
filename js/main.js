@@ -7,11 +7,11 @@
   const infoBoxes = [
     {title: 'Smart Connection', 
       text: "The status light lets you know when you're connected via Bluetooth and whether it's time for a quick charge—making your listening experience hassle-free.", 
-      image: 'images/ar_hand_prompt.png'},
-    {title: 'Test2', text: 'testing 123', image: 'images/test.png'},
-    {title: 'Test3', text: 'testing 123', image: 'images/test.png'},
-    {title: 'Test4', text: 'testing 123', image: 'images/test.png'},
-    {title: 'Test5', text: 'testing 123', image: 'images/test.png'},
+      image: 'images/hotspot1-connect.jpg'},
+    {title: 'Weatherproof Audio', text: "Designed to withstand sweat and rain, making these earbuds perfect for any workout or weather condition.", image: 'images/hotspot2-water.jpg'},
+    {title: 'Lasting Power', text: "Get the freedom to listen, talk, and move without interruptions, thanks to an ultra-long battery life.", image: 'images/hotspot3-battery.jpg'},
+    {title: 'Supreme Comfort', text: "The ultra-soft silicone ear tips provide a comfortable, secure fit for a superior listening experience.", image: 'images/hotspot4-comfort.jpg'},
+    {title: 'Immersive Sound', text: "Whether you're blocking out distractions with noise cancellation, enjoying ambient sound, or taking calls with clarity, the audio automatically adjusts for each situation.", image: 'images/hotspot5-sound.jpg'},
   ];
 
   function loadInfo() {
@@ -43,12 +43,12 @@
 
   function showInfo() {
     let selected = document.querySelector(`#${this.slot}`);
-    gsap.to(selected, 1, { autoAlpha: 1 });
+    gsap.to(selected, 0.5, { autoAlpha: 1, scale: 1 }); 
   }
-
+  
   function hideInfo() {
     let selected = document.querySelector(`#${this.slot}`);
-    gsap.to(selected, 1, { autoAlpha: 0 });
+    gsap.to(selected, 0.5, { autoAlpha: 0, scale: 0.8 }); 
   }
 
   //Event listeners
