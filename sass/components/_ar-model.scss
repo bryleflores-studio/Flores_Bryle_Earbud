@@ -1,5 +1,45 @@
 @use '../abstracts/variables' as v;
 
+model-viewer {
+  width: auto;
+  max-width: 1200px;
+  height: 700px;
+  background-color: #efefef;
+  margin: 0 auto;
+}
+
+
+
+@media (max-width: 767px) {
+
+  #mobile-info {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .HotspotAnnotation {
+    display: none;
+  }
+
+  .Hotspot {
+    display: none;
+  }
+
+  #ar-button {
+    display: none;
+  }
+
+  model-viewer > #ar-prompt {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+
+  #mobile-info {
+    display: none;
+  }
   model-viewer {
     width: auto;
     max-width: 1200px;
@@ -7,15 +47,29 @@
     background-color: #efefef;
     margin: 0 auto;
   }
-  
-  // Customize our own hotspot
+
+  .HotspotAnnotation {
+    display: block;
+  }
+
+  .Hotspot {
+    display: block;
+  }
+
+  #ar-button {
+    display: block;
+  }
+
+  model-viewer > #ar-prompt {
+    display: block;
+  }
+
   .Hotspot {
     background: url(../images/triangle-ani.gif) center no-repeat;
     background-size: contain;
     border: 0px;
     width: 60px;
     height: 60px;
-    // display: none;
     transition: all .5s ease-in-out;
     cursor: pointer;
     animation: pulse 1s ease-in-out infinite;
@@ -25,12 +79,10 @@
   .Hotspot:hover {
     background: url(../images/triangle-ani-hover.png) center no-repeat;
     background-size: contain;
-    border: 0px;
     width: 80px;
     height: 80px;
     animation-play-state: paused;
     transform: scale(1);
-
   }
 
   @keyframes pulse {
@@ -38,7 +90,7 @@
       transform: scale(1);
     }
     50% {
-      transform: scale(1.2); 
+      transform: scale(1.2);
     }
     100% {
       transform: scale(1);
@@ -50,13 +102,12 @@
     pointer-events: none;
   }
 
-  .HotspotAnnotation{
+  .HotspotAnnotation {
     visibility: hidden;
     background: #fff;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
     color: rgba(0, 0, 0, 0.8);
-    display: block;
     font-family: v.$main-font-family, Helvetica Neue, sans-serif;
     font-size: 18px;
     font-weight: 700;
@@ -78,7 +129,6 @@
     padding: 5px;
   }
 
-
   .HotspotAnnotation p {
     color: #333;
     font-size: v.$body-font-size;
@@ -95,9 +145,7 @@
     height: 30px;
     background-color: #E89B36;
   }
-  
-  /* AR Rules */
-  
+
   #ar-button {
     background-image: url(../images/ar_icon.png);
     background-repeat: no-repeat;
@@ -112,35 +160,43 @@
     padding: 0px 16px 0px 40px;
     font-family: Roboto Regular, Helvetica Neue, sans-serif;
     font-size: 14px;
-    color:#4285f4;
+    color: #4285f4;
     height: 36px;
     line-height: 36px;
     border-radius: 18px;
     border: 1px solid #DADCE0;
   }
-  
+
   #ar-button:active {
     background-color: #E8EAED;
   }
-  
+
   #ar-button:focus {
     outline: none;
   }
-  
+
   #ar-button:focus-visible {
     outline: 1px solid #4285f4;
   }
-  
+
   @keyframes circle {
-    from { transform: translateX(-50%) rotate(0deg) translateX(50px) rotate(0deg); }
-    to   { transform: translateX(-50%) rotate(360deg) translateX(50px) rotate(-360deg); }
+    from {
+      transform: translateX(-50%) rotate(0deg) translateX(50px) rotate(0deg);
+    }
+    to {
+      transform: translateX(-50%) rotate(360deg) translateX(50px) rotate(-360deg);
+    }
   }
-  
+
   @keyframes elongate {
-    from { transform: translateX(100px); }
-    to   { transform: translateX(-100px); }
+    from {
+      transform: translateX(100px);
+    }
+    to {
+      transform: translateX(-100px);
+    }
   }
-  
+
   model-viewer > #ar-prompt {
     position: absolute;
     left: 50%;
@@ -148,11 +204,12 @@
     animation: elongate 2s infinite ease-in-out alternate;
     display: none;
   }
-  
+
   model-viewer[ar-status="session-started"] > #ar-prompt {
     display: block;
   }
-  
+
   model-viewer > #ar-prompt > img {
     animation: circle 4s linear infinite;
   }
+}
