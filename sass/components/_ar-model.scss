@@ -10,20 +10,39 @@
   
   // Customize our own hotspot
   .Hotspot {
-    // background: url(../images/hotspot.svg) center no-repeat;
-    background-color: red;
-    border-radius: 50px;
+    background: url(../images/triangle-ani.gif) center no-repeat;
+    background-size: contain;
     border: 0px;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     // display: none;
-    transition: all 1s ease-in-out;
+    transition: all .5s ease-in-out;
     cursor: pointer;
+    animation: pulse 1s ease-in-out infinite;
+    animation-play-state: running;
   }
 
   .Hotspot:hover {
-    background-color: blue;
-    border-radius: 50px;
+    background: url(../images/triangle-ani-hover.png) center no-repeat;
+    background-size: contain;
+    border: 0px;
+    width: 80px;
+    height: 80px;
+    animation-play-state: paused;
+    transform: scale(1);
+
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2); 
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 
   .Hotspot:not([data-visible]) {
@@ -34,7 +53,7 @@
   .HotspotAnnotation{
     visibility: hidden;
     background: #fff;
-    border-radius: 4px;
+    border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
     color: rgba(0, 0, 0, 0.8);
     display: block;
