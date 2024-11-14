@@ -3,6 +3,10 @@
   //variables
   const model = document.querySelector("#model");
   const hotspots = document.querySelectorAll(".Hotspot");
+  const menu = document.querySelector("#menu");
+  const hamburger = document.querySelector("#hamburger");
+  const closeButton = document.querySelector("#close");
+  const menuLinks = document.querySelectorAll("#menu ul a");
 
   const infoBoxes = [
     {title: 'Smart Connection', 
@@ -13,6 +17,10 @@
     {title: 'Supreme Comfort', text: "The ultra-soft silicone ear tips provide a comfortable, secure fit for a superior listening experience.", image: 'images/hotspot4-comfort.jpg'},
     {title: 'Immersive Sound', text: "Whether you're blocking out distractions with noise cancellation, enjoying ambient sound, or taking calls with clarity, the audio automatically adjusts for each situation.", image: 'images/hotspot5-sound.jpg'},
   ];
+
+  function toggleMenu() {
+    menu.classList.toggle("open");
+}
 
   function loadInfo() {
     infoBoxes.forEach((infoBox, index)=> {
@@ -52,6 +60,13 @@
   }
 
   //Event listeners
+  hamburger.addEventListener("click", toggleMenu);
+  closeButton.addEventListener("click", toggleMenu);
+
+  menuLinks.forEach(link => {
+      link.addEventListener("click", toggleMenu);
+  })
+
   model.addEventListener("load", modelLoaded);
 
   hotspots.forEach(function (hotspot) {

@@ -10,7 +10,42 @@
   </head>
   <body>
 
-    <h1>Sony LiveBuds Series</h1>
+    <header>
+      <h1 class="hidden">Sony LiveBuds Series</h1>
+
+      <div id="logo">
+        <a href="#"><img src="images/sony-logo-white.svg" alt="Sony Logo White" id="logo-white"></a>
+      </div>
+      <div id="dektop-menu">
+        <nav>
+          <ul>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#store">Store</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#support">Support</a></li>
+          </ul>
+        </nav>
+    
+      </div>
+    
+      <button id="hamburger">&#9776;</button>
+      <div id="menu" class="overlay">
+          <button id="close">&times;</button>
+          <nav>
+              <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+              </ul>
+          </nav>
+      </div>
+
+  </header>
+
+  
+
+ 
     <!-- <model-viewer> HTML element -->
       <model-viewer id="model" src="model/earbud-model.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="0.73" exposure="0.83">
 

@@ -1,0 +1,28 @@
+html, body {
+    margin: 0;           
+    padding: 0;          
+    height: 100%; 
+}
+
+body {
+    background-color: white;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none;
+}
+
+img, embed, object, video, picture {
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}

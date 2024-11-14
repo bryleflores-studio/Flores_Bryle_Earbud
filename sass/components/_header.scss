@@ -1,0 +1,115 @@
+@use "../abstracts" as a;
+@use "../abstracts/variables" as v;
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+header {
+    padding: 20px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo-white {
+    width: 100px;
+    height: 100%;
+}
+
+#dektop-menu {
+    display: none;
+}
+
+#dektop-menu nav {
+    margin-left: 20px;
+}
+
+#dektop-menu ul {
+    display: flex;
+}
+
+#dektop-menu li {
+    margin-left: 20px;
+}
+
+#dektop-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+#dektop-menu a:hover {
+    color: v.$primary-color;
+}
+
+#hamburger, #close {
+    font-size: 32px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    justify-content: left;
+    align-items: center;
+    z-index: 1;
+}
+
+.overlay.open {
+    display: flex;
+}
+
+#close {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.overlay ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.overlay li {
+    margin: 20px 0;
+}
+
+.overlay a {
+    color: white;
+    font-size: 32px;
+    text-decoration: none;
+}
+
+.overlay a:hover {
+    color: a.$primary-color;
+}
+
+@media (min-width: 768px) {
+    #hamburger {
+        display: none;
+    }
+
+    #dektop-menu {
+        display: flex;
+        align-items: center;
+    }
+}
