@@ -10,14 +10,14 @@
 
   // Build flipbook and store it in array []
 
-  const frameCount = 1231; // how many still frames
+  const frameCount = 600; // how many still frames
   const images = []; // array to hold images
 
   // Fill the array with images and point to the images
   for(let i = 0; i < frameCount; i++) {
       const img = new Image();
       // recreating the path: images/explode_0001.webp
-      img.src = `images/animation_${(i+1).toString().padStart(4, '0')}.webp`;
+      img.src = `images/explode_${(i+1).toString().padStart(4, '0')}.webp`;
       images.push(img);
   }
 
@@ -30,12 +30,12 @@
   }
 
   gsap.to(buds, {
-      frame: 1230, //like saying x:400, we specify a value for the animated property
+      frame: 599, //like saying x:400, we specify a value for the animated property
       snap: "frame",
       scrollTrigger: {
           trigger: "#explode-view",
           pin: true,
-          scrub: 200,
+          scrub: 30,
           markers: true,
           start: "top top",
            end: "bottom top"
