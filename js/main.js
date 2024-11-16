@@ -1,3 +1,67 @@
+
+// Scrub Animation
+(() => {
+
+  const canvas = document.querySelector("#explode-view");
+  const context = canvas.getContext("2d");
+
+  canvas.width = 1920;
+  canvas.height = 1080;
+
+  // Build flipbook and store it in array []
+
+  const frameCount = 1231; // how many still frames
+  const images = []; // array to hold images
+
+  // Fill the array with images and point to the images
+  for(let i = 0; i < frameCount; i++) {
+      const img = new Image();
+      // recreating the path: images/explode_0001.webp
+      img.src = `images/animation_${(i+1).toString().padStart(4, '0')}.webp`;
+      images.push(img);
+  }
+
+  // console.table(images);
+
+  //create an object called buds, have a property called frames. Similar to how we animate a DOM object and its properties.
+
+  const buds = {
+      frame: 0
+  }
+
+  gsap.to(buds, {
+      frame: 1230, //like saying x:400, we specify a value for the animated property
+      snap: "frame",
+      scrollTrigger: {
+          trigger: "#explode-view",
+          pin: true,
+          scrub: 200,
+          markers: true,
+          start: "top top",
+           end: "bottom top"
+
+      },
+      onUpdate: render
+
+  })
+
+  //when images is first loaded into the array, call the render function
+  // this code added last to have a start frame
+  images[0].addEventListener("load", render)
+
+
+  function render() {
+      //console.log(buds.frame);
+      console.log(images[buds.frame]); // accessing images1, images2, ...
+      //wipe the canvas
+      context.clearRect(0,0, canvas.width, canvas.height);
+      context.drawImage(images[buds.frame], 0, 0);
+  }
+
+})();
+
+
+
 (() => {
   // Variables
   const model = document.querySelector("#model");
@@ -55,3 +119,4 @@
   // Event listener for model loading (if necessary)
   model.addEventListener("load", loadInfo);
 })();
+
