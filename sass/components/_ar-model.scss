@@ -8,10 +8,7 @@ model-viewer {
   margin: 0 auto;
 }
 
-
-
 @media (max-width: 767px) {
-
   #mobile-info {
     display: block;
     text-align: center;
@@ -36,10 +33,10 @@ model-viewer {
 }
 
 @media (min-width: 768px) {
-
   #mobile-info {
     display: none;
   }
+
   model-viewer {
     width: auto;
     max-width: 1200px;
@@ -48,29 +45,19 @@ model-viewer {
     margin: 0 auto;
   }
 
+  // Hotspot styling
   .HotspotAnnotation {
     display: block;
   }
 
   .Hotspot {
     display: block;
-  }
-
-  #ar-button {
-    display: block;
-  }
-
-  model-viewer > #ar-prompt {
-    display: block;
-  }
-
-  .Hotspot {
     background: url(../images/triangle-ani.gif) center no-repeat;
     background-size: contain;
-    border: 0px;
+    border: 0;
     width: 60px;
     height: 60px;
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     cursor: pointer;
     animation: pulse 1s ease-in-out infinite;
     animation-play-state: running;
@@ -79,6 +66,7 @@ model-viewer {
   .Hotspot:hover {
     background: url(../images/triangle-ani-hover.png) center no-repeat;
     background-size: contain;
+    border: 0;
     width: 80px;
     height: 80px;
     animation-play-state: paused;
@@ -146,6 +134,7 @@ model-viewer {
     background-color: #E89B36;
   }
 
+  /* AR Rules */
   #ar-button {
     background-image: url(../images/ar_icon.png);
     background-repeat: no-repeat;
