@@ -1,0 +1,70 @@
+@use '../abstracts/variables' as v;
+
+#hero-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  flex-direction: column;  // Default to column for mobile views
+  
+  #hero-title {
+    text-align: center;
+    max-width: 600px;
+  }
+
+  h2 {
+    font-size: 48px;
+    font-weight: bold;
+    color: v.$body-text-color;
+    margin: 0;
+  }
+
+  p {
+    font-size: 18px;
+    color: v.$body-text-color;
+    margin-top: 10px;
+  }
+
+  #hero-image {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    max-width: 600px;
+    margin-left: 80px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1200px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    #hero-title {
+      max-width: 50%;
+      text-align: left;
+      margin-left: 50px;
+    }
+
+    #hero-image {
+      max-width: 80%; 
+      min-width: 70%;
+      margin-left: 70px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    flex-direction: row;  // Keep row layout for large screens
+    justify-content: flex-start;  // Align content to the start of the container
+    align-items: center;
+
+    #hero-title {
+      max-width: 50%;
+      text-align: left;
+      margin-left: 100px;
+    }
+
+    #hero-image {
+      max-width: 65%; 
+      margin-left: 100px;
+    }
+  }
+}
