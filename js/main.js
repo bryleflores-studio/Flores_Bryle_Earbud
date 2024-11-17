@@ -1,12 +1,26 @@
 (() => {
 
+  (() => {
+    const earbuds = document.querySelector("#ear-buds");
+    const buttons = document.querySelectorAll("#color-buttons button");
+  
+    function swapColor(e) {
+      const selected = e.currentTarget.id;
+      earbuds.src = `images/product-${selected}.jpg`;
+    }
+  
+    buttons.forEach(button => {
+      button.addEventListener("click", swapColor);
+    });
+  })();
+  
+
   const divisor = document.querySelector("#divisor");
   const slider = document.querySelector("#slider");
 
   function moveDivisor() {
-    // console.log("moveDivisor is called");
-    console.log(slider.value);
-    // divisor.style.width = slider.value+"%";
+    // console.log(slider.value);
+
     divisor.style.width = `${slider.value}%`;
   }
 
@@ -88,7 +102,7 @@
       trigger: "#explode-view",
       pin: true,
       scrub: 30,
-      markers: true,
+      markers: false,
       start: "top top",
       end: `+=${frameCount * 5}px`,
     },

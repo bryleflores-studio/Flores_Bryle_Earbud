@@ -46,7 +46,7 @@
     text-align: center;
     margin-top: 40px;
     line-height: 15px;
-    img {
+    img { 
         width: 100%;
         border-radius: 8px;
     }
@@ -80,6 +80,7 @@
     }
 
     #feature-sound {
+      margin-bottom: 40px;
       h2 {
         font-size: 30px;
         font-weight: v.$font-weight-bold;
