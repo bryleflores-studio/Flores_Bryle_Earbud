@@ -1,5 +1,18 @@
 (() => {
 
+  const divisor = document.querySelector("#divisor");
+  const slider = document.querySelector("#slider");
+
+  function moveDivisor() {
+    // console.log("moveDivisor is called");
+    console.log(slider.value);
+    // divisor.style.width = slider.value+"%";
+    divisor.style.width = `${slider.value}%`;
+  }
+
+
+  slider.addEventListener("input", moveDivisor);
+
   const model = document.querySelector("#model");
   const hotspots = document.querySelectorAll(".Hotspot");
 
@@ -107,3 +120,5 @@
   });
 
 })();
+
+
