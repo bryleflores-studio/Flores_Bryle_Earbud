@@ -1,0 +1,92 @@
+#comparison-con {
+    display: none;
+}
+
+@media screen and (min-width: 1200px) {
+
+    #mobile-tablet-view {
+        display: none;
+    }
+
+    #comparison-con {
+        display: block;
+    }
+
+    #xray {
+        position: relative;
+        aspect-ratio: 16/10;
+        background-image: url(../images/xray-wireframe-black.jpg);
+        background-size: cover;
+    }
+
+    #divisor {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(../images/xray-colored.jpg);
+        background-size: cover;
+        width: 50%;
+        height: 100%;
+    }
+
+    input[type=range] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        position: relative;
+        top: -18px;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.1);
+        width: 100%;  /* Make the slider take up the full width */
+    }
+
+    input[type=range]:focus {
+        outline: none;
+    }
+
+    input[type=range]::-moz-range-track {
+        height: 15px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+        position: relative;
+        outline: none;
+    }
+
+    input[type=range]::active {
+        border: none;
+        outline: none;
+    }
+
+    /* Custom thumb with diamond icon and larger size */
+    input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 40px;  /* Increase thumb size */
+        height: 40px; /* Increase thumb size */
+        background: url('../images/diamond.svg') no-repeat center center;
+        background-size: contain;  /* Ensure the SVG scales properly */
+        border: none;
+
+    }
+
+    input[type=range]::-moz-range-thumb {
+        -moz-appearance: none;
+        appearance: none;
+        width: 40px;  /* Increase thumb size */
+        height: 40px; /* Increase thumb size */
+        background: url('../images/diamond.svg') no-repeat center center;
+        background-size: contain;  /* Ensure the SVG scales properly */
+        border: none;
+
+    }
+
+    input[type=range]:focus::-webkit-slider-thumb {
+        background: url('../images/diamond.svg') no-repeat center center;
+        background-size: contain;
+    }
+
+    input[type=range]:focus::-moz-range-thumb {
+        background: url('../images/diamond.svg') no-repeat center center;
+        background-size: contain;
+    }
+}
