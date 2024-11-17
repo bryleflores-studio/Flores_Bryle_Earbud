@@ -34,9 +34,9 @@
         -moz-appearance: none;
         appearance: none;
         position: relative;
-        top: -18px;
+        top: -450px;
         left: 0;
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: rgba(255, 255, 255, 0.0);
         width: 100%;  /* Make the slider take up the full width */
     }
 
@@ -61,8 +61,8 @@
     input[type=range]::-webkit-slider-thumb {
         -webkit-appearance: none;
         appearance: none;
-        width: 40px;  /* Increase thumb size */
-        height: 40px; /* Increase thumb size */
+        width: 60px;  /* Increase thumb size */
+        height: 60px; /* Increase thumb size */
         background: url('../images/diamond.svg') no-repeat center center;
         background-size: contain;  /* Ensure the SVG scales properly */
         border: none;

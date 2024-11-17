@@ -140,81 +140,6 @@ header {
 .overlay a:hover {
   color: v.$primary-color;
 }
-footer {
-    display: flex;
-    flex-direction: column;
-    padding: 40px 20px;
-    background-color: black;
-    color: white;
-  }
-  
-  #footer-logo {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  #footer-logo a img {
-    width: 150px;
-  }
-  
-  .footer__nav {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin-bottom: 20px;
-  }
-  
-  .footer__nav div {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .footer__nav h2 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .footer__nav-list {
-    display: flex;
-    flex-direction: column; 
-    gap: 10px;
-  }
-  
-  .footer__nav-list li {
-    margin-bottom: 10px;
-  }
-  
-  .footer__nav-list a,
-  .footer__social-links a { 
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-  }
-  
-  .footer__nav-list a:hover,
-  .footer__social-links a:hover { 
-    color: v.$primary-color; 
-  }
-  
-  .footer__social-links {
-    display: flex;
-    flex-direction: column; 
-    gap: 10px;
-  }
-  
-  .footer__social-links li {
-    display: inline-block;
-  }
-  
-  .footer__legal {
-    text-align: center;
-    font-size: 0.9rem;
-    color: white;
-    margin-top: 30px;
-  }
 
 
 
@@ -237,25 +162,6 @@ footer {
   #dektop-menu {
     display: flex;
     align-items: center;
-  }
-
-  .footer__nav {
-    flex-direction: row; 
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
-  .footer__nav div {
-    flex-direction: column;
-  }
-
-  .footer__nav-list {
-    flex-direction: column;
-  }
-
-  .footer__social-links {
-    flex-direction: column; 
-    justify-content: flex-start;
   }
 
 }

@@ -24,13 +24,14 @@
   justify-content: center;
   text-align: center;
   width: 70%;
-  padding: 20px;
+
 }
 
 #model-info h2 {
   font-size: 32px;
   font-weight: bold;
   color: v.$body-text-color;
+  margin: 0;
 }
 
 #model-info p {
@@ -39,23 +40,14 @@
   margin-top: 10px;
 }
 
-model-viewer {
-  width: auto;
-  max-width: 600px; /* Set a max-width to ensure it doesn't stretch too much */
-  height: 700px;
-  background: linear-gradient(to top, #f4e8ce, #fffdf9);
-  margin: 0 auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-}
 
 /* Mobile Styles */
 @media (max-width: 767px) {
 
   #mobile-info {
-    display: block; /* Ensure info is displayed */
+    display: block;
     text-align: center;
-    width: 100%; /* Full width on small screens */
+    width: 100%;
     margin-top: 20px;
     background-color: white;
     border-radius: 15px;
@@ -71,22 +63,22 @@ model-viewer {
   }
 
   model-viewer {
-    width: 100%; /* Make model-viewer take full width on mobile */
-    height: 400px; /* Reduce height for mobile */
+    width: 100%;
+    height: 400px; 
     margin-top: 20px;
   }
 
   .HotspotAnnotation,
   .Hotspot {
-    display: none; /* Hide hotspots on mobile */
+    display: none;
   }
 
   #ar-button {
-    display: none; /* Hide AR button on mobile */
+    display: none; 
   }
 
   model-viewer > #ar-prompt {
-    display: none; /* Hide AR prompt on mobile */
+    display: none; 
   }
 }
 
@@ -94,13 +86,15 @@ model-viewer {
 @media (min-width: 768px) {
 
   #model-wrapper {
-    flex-direction: row; /* Horizontal alignment on large screens */
-    justify-content: space-between; /* Space between model and info */
+    flex-direction: row; 
+    justify-content: space-between; 
 
   }
 
   #model-info {
     text-align: left;
+    width: 450px;
+    margin-left: 30px;
   }
 
 
@@ -110,8 +104,7 @@ model-viewer {
 
   model-viewer {
     width: 100%;
-    height: 700px;
-    background: linear-gradient(to top, #f4e8ce, #fffdf9);
+    height: 600px;
     margin: 0 auto;
     border-radius: 20px;
   }

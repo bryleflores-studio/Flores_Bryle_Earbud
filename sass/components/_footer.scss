@@ -1,0 +1,134 @@
+@use "../abstracts" as a;
+@use "../abstracts/variables" as v;
+
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    background-color: black;
+    color: white;
+}
+
+#footer-promo {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    img {
+        width: 100%;
+        height: auto; 
+        display: none;
+    }
+}
+
+#footer-promo-mobile {
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+#footer-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#footer-logo a img {
+    width: 150px;
+}
+
+.footer__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 30px 20px 30px 20px;
+    line-height: 13px;
+
+}
+
+.footer__nav div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.footer__nav h2 {
+    font-size: 17px;
+    font-weight: v.$font-weight-bold;
+    margin-bottom: 20px;
+
+}
+
+.footer__nav-list {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+}
+
+.footer__nav-list li {
+    margin-bottom: 10px;
+    font-weight: v.$font-weight-regular;
+}
+
+.footer__nav-list a,
+.footer__social-links a { 
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer__nav-list a:hover,
+.footer__social-links a:hover { 
+    color: v.$primary-color; 
+}
+
+.footer__social-links {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+}
+
+.footer__social-links li {
+    display: inline-block;
+}
+
+.footer__legal {
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+    #footer-promo-mobile {
+        display: none;
+    }
+
+    #footer-promo {
+        img {
+            display: block;
+        }
+    }
+
+    .footer__nav {
+        flex-direction: row; 
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: 30px 40px 40px 20px;
+    }
+
+    .footer__nav div {
+        flex-direction: column;
+    }
+
+    .footer__nav-list {
+        flex-direction: column;
+    }
+
+    .footer__social-links {
+        flex-direction: column; 
+        justify-content: flex-start;
+    }
+}

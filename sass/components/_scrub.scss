@@ -1,4 +1,12 @@
 #explode-view {
     max-width: 100%;
+    display: none;
     /* width: 100vw; */
+  }
+
+
+  @media screen and (min-width: 768px) {
+    #explode-view {
+      display: block;
+    }
   }
