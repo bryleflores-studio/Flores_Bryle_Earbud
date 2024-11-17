@@ -2,27 +2,38 @@
 
 #hero-wrapper {
   display: flex;
+  flex-direction: column;  // Default to column for mobile views
   align-items: center;
   justify-content: center;
   padding: 80px 20px;
-  flex-direction: column;  // Default to column for mobile views
-  
+
   #hero-title {
     text-align: center;
     max-width: 600px;
-  }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 40px;
+    
+    img {
+      width: 120px; // Adjust logo size
+      height: auto;
+      margin-bottom: 20px; // Space between logo and title
+    }
 
-  h2 {
-    font-size: 48px;
-    font-weight: bold;
-    color: v.$body-text-color;
-    margin: 0;
-  }
+    h2 {
+      font-size: 48px;
+      font-weight: bold;
+      color: v.$body-text-color;
+      margin: 0;
+    }
 
-  p {
-    font-size: 18px;
-    color: v.$body-text-color;
-    margin-top: 10px;
+    p {
+      font-size: 18px;
+      color: v.$body-text-color;
+      margin-top: 10px;
+    }
   }
 
   #hero-image {
@@ -42,29 +53,43 @@
       max-width: 50%;
       text-align: left;
       margin-left: 50px;
+      align-items: flex-start;
+      line-height: 50px;
+
+      img {
+        margin-bottom: 15px; // Adjust space for larger screens
+        width: 100px; // Slightly smaller logo on larger screens
+      }
     }
 
     #hero-image {
-      max-width: 80%; 
+      max-width: 85%; 
       min-width: 70%;
-      margin-left: 70px;
+      margin-left: 30px;  // Adjusted margin for a larger image
     }
   }
 
   @media (min-width: 1200px) {
-    flex-direction: row;  // Keep row layout for large screens
-    justify-content: flex-start;  // Align content to the start of the container
+    flex-direction: row;  
+    justify-content: flex-start;
     align-items: center;
 
     #hero-title {
       max-width: 50%;
       text-align: left;
       margin-left: 100px;
+      align-items: flex-start;
+      line-height: 50px;
+
+      img {
+        margin-bottom: 20px; // Maintain space between logo and title
+        width: 120px; // Keep logo size consistent for large screens
+      }
     }
 
     #hero-image {
-      max-width: 65%; 
-      margin-left: 100px;
+      max-width: 75%; 
+      margin-left: 50px;  // Adjust margin for larger screens
     }
   }
 }

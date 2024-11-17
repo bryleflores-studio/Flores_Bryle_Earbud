@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>Sony LiveBuds Series</title>
+    <link rel="icon" href="images/sony-logo-black.svg" type="image/png">
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <link href="css/main.css" rel="stylesheet"/>
@@ -48,6 +49,7 @@
     <section id="hero" class="grid-con">
       <div id="hero-wrapper" class="col-span-full">
         <div id="hero-title">
+          <img src="images/sony-logo-black.svg" alt="Sony Logo Black">
           <h2>LiveBuds Series</h2>
           <p>Stay Connected.</p>
         </div>
@@ -69,10 +71,45 @@
 
     <section id="features">
       <div id="features-wrapper">
+
+        <div id="features-con"> 
+        <div class="feature-cards">
+          <img src="images/feature-1.png" alt="Interactive Touch Feature">
+          <h2>Touch Interface</h2>
+          <p>LiveBuds is certified by Hi-Res Audio Wireless and supports Sony's LDAC audio codec at transmission speeds of up to 990kbps
+          </p>
+        </div>
+        <div class="feature-cards">
+          <img src="images/feature-2.png" alt="Wireless Feature">
+          <h2>Hi-Res Audio Wireless</h2>
+          <p>LiveBuds is certified by Hi-Res Audio Wireless and supports Sony's LDAC audio codec at transmission speeds of up to 990kbps
+          </p>
+        </div>
+        <div class="feature-cards">
+          <img src="images/feature-3.png" alt="Battery Life">
+          <h2>Up to 38 hours long</h2>
+          <p>Supports wireless charging and dual-device connection
+          </p>
+        </div>
+        <div class="feature-cards">
+          <img src="images/feature-4.png" alt="Driver Parts">
+          <h2>11mm Balance Driver</h2>
+          <p>The optimised design of the centring disk allows the earbuds to deliver a live-like acoustic experience.
+          </p>
+        </div>
       </div>
 
+      <div id="feature-sound">
+        <img src="images/feature-5.png" alt="Sound Waves Visual">
+        <h2>Up to 48dB Deep Noise Cancellation</h2>
+        <p>The earbuds bring you instant quiet, even when in a noisy city, metro station or airport.
+        </p>
+      </div>
+      </div>
+      
+
+
     </section>
-    
     
 
 
@@ -82,45 +119,54 @@
       </div>
     </section>
     
- 
-    <!-- <model-viewer> HTML element -->
-      <model-viewer id="model" src="model/earbud-model.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="0.73" exposure="0.83">
+      <section id="model-3d">
+      <div id="model-wrapper">
 
-        <button class="Hotspot" slot="hotspot-1" data-position="0.005841734626967465m 0.24m 0.19796179910924638m" data-normal="2.4492937051703357e-16m 3.126511277583096e-39m 1m" data-visibility-attribute="visible">
-        <div id="hotspot-1" class="HotspotAnnotation"></div>
-      </button>
-        
-        <button class="Hotspot" slot="hotspot-2" data-position="-0.19168639993258374m 0.1943081765013318m 0.10404273213968884m" data-normal="-0.8667368531509941m -0.4987645731857501m -0.0010620380164685075m" data-visibility-attribute="visible">
-            <div id="hotspot-2" class="HotspotAnnotation"></div>
-           </button>
-        
-        <button class="Hotspot" slot="hotspot-3" data-position="0.13127696077112933m 0.3187511145044424m -0.0022176994731852306m" data-normal="0.8664629547992987m -0.49922953913991197m -0.0034373260857274972m" data-visibility-attribute="visible">
-            <div id="hotspot-3"  class="HotspotAnnotation"></div>
-        </button>
-        
-        <button class="Hotspot" slot="hotspot-4" data-position="0.0599942524326173m 0.27431610424426506m -0.639528814415697m" data-normal="-0.36749885875242266m -0.617690203318525m -0.6952721780281348m" data-visibility-attribute="visible">
-            <div id="hotspot-4"  class="HotspotAnnotation"></div>
-        </button>
-        
-        <button class="Hotspot" slot="hotspot-5" data-position="-0.3319212151414095m 0.16065243493679787m -0.4091413558267874m" data-normal="-0.9670363678087703m -0.24116524053875366m -0.08173120634803918m" data-visibility-attribute="visible">
-            <div id="hotspot-5"  class="HotspotAnnotation"></div>
-        </button>
-
-
-        <div class="progress-bar hide" slot="progress-bar">
-            <div class="update-bar"></div>
+        <div id="model-info">
+          <h2>Explore Features</h2>
+          <p>Design and Craftsmanship - The beauty of cutting-edge technology</p>
         </div>
-        <button slot="ar-button" id="ar-button">
-            View in your space
-        </button>
-        <div id="ar-prompt">
-            <img src="ar_hand_prompt.png">
-        </div>
-      </model-viewer>  
+      <!-- <model-viewer> HTML element -->
+        <model-viewer id="model" src="model/earbud-model.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="0.73" exposure="0.83">
 
-      <div id="mobile-info">
-        <img src="images/mobile-infos.jpg" alt="Mobile Info" />
+          <button class="Hotspot" slot="hotspot-1" data-position="0.005841734626967465m 0.24m 0.19796179910924638m" data-normal="2.4492937051703357e-16m 3.126511277583096e-39m 1m" data-visibility-attribute="visible">
+          <div id="hotspot-1" class="HotspotAnnotation"></div>
+        </button>
+          
+          <button class="Hotspot" slot="hotspot-2" data-position="-0.19168639993258374m 0.1943081765013318m 0.10404273213968884m" data-normal="-0.8667368531509941m -0.4987645731857501m -0.0010620380164685075m" data-visibility-attribute="visible">
+              <div id="hotspot-2" class="HotspotAnnotation"></div>
+            </button>
+          
+          <button class="Hotspot" slot="hotspot-3" data-position="0.13127696077112933m 0.3187511145044424m -0.0022176994731852306m" data-normal="0.8664629547992987m -0.49922953913991197m -0.0034373260857274972m" data-visibility-attribute="visible">
+              <div id="hotspot-3"  class="HotspotAnnotation"></div>
+          </button>
+          
+          <button class="Hotspot" slot="hotspot-4" data-position="0.0599942524326173m 0.27431610424426506m -0.639528814415697m" data-normal="-0.36749885875242266m -0.617690203318525m -0.6952721780281348m" data-visibility-attribute="visible">
+              <div id="hotspot-4"  class="HotspotAnnotation"></div>
+          </button>
+          
+          <button class="Hotspot" slot="hotspot-5" data-position="-0.3319212151414095m 0.16065243493679787m -0.4091413558267874m" data-normal="-0.9670363678087703m -0.24116524053875366m -0.08173120634803918m" data-visibility-attribute="visible">
+              <div id="hotspot-5"  class="HotspotAnnotation"></div>
+          </button>
+
+
+          <div class="progress-bar hide" slot="progress-bar">
+              <div class="update-bar"></div>
+          </div>
+          <button slot="ar-button" id="ar-button">
+              View in your space
+          </button>
+          <div id="ar-prompt">
+              <img src="ar_hand_prompt.png">
+          </div>
+        </model-viewer>  
+
+        <div id="mobile-info">
+          <img src="images/mobile-infos.jpg" alt="Mobile Info"/>
+        </div>
+
       </div>
+      </section>
 
         
 

@@ -65,7 +65,7 @@
     images.push(img);
   }
 
-  const buds = { frame: 0 };
+  const buds = { frame: 25 };
 
 
   gsap.to(buds, {
