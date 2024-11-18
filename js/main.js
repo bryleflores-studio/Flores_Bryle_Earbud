@@ -132,4 +132,57 @@
 
 })();
 
+(() => {
 
+  // GSAP ScrollTrigger Animations
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.utils.toArray("#model-info, #model, #mobile-info").forEach(section => {
+    gsap.from(section, {
+      opacity: 0,
+      y: 100,
+      duration: .5,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: section,
+        start: "top 80%",
+        end: "bottom top",
+        scrub: true,
+      }
+    });
+  });
+
+  gsap.utils.toArray("#color-info, #color-image, #feature-sound, #footer-promotion, #xray-wrapper").forEach(section => {
+    gsap.from(section, {
+      opacity: 0,
+      duration: .5,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: section,
+        start: "top 80%",
+        end: "bottom 75%",
+        scrub: true,
+      }
+    });
+  });
+
+  //Staggered cards
+gsap.set("#features-con .feature-cards", { opacity: 0, y: 50 });
+
+gsap.to("#features-con .feature-cards", {
+  scrollTrigger: {
+    trigger: "#features-con .feature-cards",
+    start: "top 90%",
+    end: "bottom 75%",
+    toggleActions: "play none none reverse",
+    scrub: true,
+  },
+  opacity: 1,
+  y: 0,            
+  duration: 1,      
+  ease: "power3.out",
+  stagger: 0.3,         
+});
+
+
+})();
