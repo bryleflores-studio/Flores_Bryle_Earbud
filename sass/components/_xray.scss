@@ -39,7 +39,7 @@
         -moz-appearance: none;
         appearance: none;
         position: relative;
-        top: -450px;
+        top: -380px;
         left: 0;
         background-color: rgba(255, 255, 255, 0.0);
         width: 100%;
@@ -77,8 +77,8 @@
     input[type=range]::-moz-range-thumb {
         -moz-appearance: none;
         appearance: none;
-        width: 40px;  
-        height: 40px; 
+        width: 60px;  
+        height: 60px; 
         background: url('../images/diamond.svg') no-repeat center center;
         background-size: contain;  
         border: none;
