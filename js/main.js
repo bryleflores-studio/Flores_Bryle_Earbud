@@ -1,6 +1,7 @@
 (() => {
 
   (() => {
+    // color selector 
     const earbuds = document.querySelector("#ear-buds");
     const buttons = document.querySelectorAll("#color-buttons button");
   
@@ -14,12 +15,11 @@
     });
   })();
   
-
+  // xray
   const divisor = document.querySelector("#divisor");
   const slider = document.querySelector("#slider");
 
   function moveDivisor() {
-    // console.log(slider.value);
 
     divisor.style.width = `${slider.value}%`;
   }
@@ -43,7 +43,7 @@
     infoBoxes.forEach((infoBox, index) => {
       const selected = document.querySelector(`#hotspot-${index + 1}`);
 
-      const hotspotTitle = document.createElement('h2');
+      const hotspotTitle = document.createElement('h3');
       hotspotTitle.textContent = infoBox.title;
 
       const hotspotText = document.createElement('p');
@@ -70,13 +70,13 @@
 
   model.addEventListener("load", loadInfo);
 
-  // hotspot event listener
+
   hotspots.forEach(hotspot => {
     hotspot.addEventListener("mouseenter", showInfo);
     hotspot.addEventListener("mouseleave", hideInfo);
   });
 
-  // scrub Animation
+  // scrub animation
   const canvas = document.querySelector("#explode-view");
   const context = canvas.getContext("2d");
 
@@ -120,13 +120,11 @@
   const closeButton = document.querySelector("#close");
   const menuLinks = document.querySelectorAll("#menu ul a");
 
-  // menu function
   function toggleMenu() {
     menu.classList.toggle("open");
     hamburger.classList.toggle("open");
   }
 
-  // event listener toggle
   hamburger.addEventListener("click", toggleMenu);
   closeButton.addEventListener("click", toggleMenu);
   menuLinks.forEach(link => {
