@@ -4,12 +4,14 @@
 
 @media screen and (min-width: 1200px) {
 
+
     #mobile-tablet-view {
         display: none;
     }
 
     #comparison-con {
         display: block;
+
     }
 
     #xray {
@@ -17,6 +19,7 @@
         aspect-ratio: 16/10;
         background-image: url(../images/xray-wireframe-black.jpg);
         background-size: cover;
+        border-radius: 15px;
     }
 
     #divisor {
@@ -27,6 +30,8 @@
         background-size: cover;
         width: 50%;
         height: 100%;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
     }
 
     input[type=range] {
@@ -37,7 +42,7 @@
         top: -450px;
         left: 0;
         background-color: rgba(255, 255, 255, 0.0);
-        width: 100%;  /* Make the slider take up the full width */
+        width: 100%;
     }
 
     input[type=range]:focus {
@@ -57,14 +62,14 @@
         outline: none;
     }
 
-    /* Custom thumb with diamond icon and larger size */
+   
     input[type=range]::-webkit-slider-thumb {
         -webkit-appearance: none;
         appearance: none;
-        width: 60px;  /* Increase thumb size */
-        height: 60px; /* Increase thumb size */
+        width: 60px; 
+        height: 60px; 
         background: url('../images/diamond.svg') no-repeat center center;
-        background-size: contain;  /* Ensure the SVG scales properly */
+        background-size: contain; 
         border: none;
 
     }
@@ -72,10 +77,10 @@
     input[type=range]::-moz-range-thumb {
         -moz-appearance: none;
         appearance: none;
-        width: 40px;  /* Increase thumb size */
-        height: 40px; /* Increase thumb size */
+        width: 40px;  
+        height: 40px; 
         background: url('../images/diamond.svg') no-repeat center center;
-        background-size: contain;  /* Ensure the SVG scales properly */
+        background-size: contain;  
         border: none;
 
     }

@@ -5,14 +5,15 @@
     <link rel="icon" href="images/sony-logo-black.svg" type="image/png">
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
-    <link href="css/main.css" rel="stylesheet"/>
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
 
   </head>
   <body>
 
     <header>
       <h1 class="hidden">Sony LiveBuds Series</h1>
-    
+      <h2 class="hidden">Header Section</h2>
       <div id="logo">
         <a href="#"><img src="images/sony-logo-white.svg" alt="Sony Logo White" id="logo-white"></a>
       </div>
@@ -46,11 +47,12 @@
       </div>
     </header>
 
-    <section id="hero" class="grid-con">
-      <div id="hero-wrapper" class="col-span-full">
+    <section id="hero">
+    <h2 class="hidden">Hero Banner</h2>
+      <div id="hero-wrapper">
         <div id="hero-title">
           <img src="images/sony-logo-black.svg" alt="Sony Logo Black">
-          <h2>LiveBuds Series</h2>
+          <h3>LiveBuds Series</h3>
           <p>Stay Connected.</p>
         </div>
     
@@ -59,87 +61,83 @@
             src="images/hero-product-case_npsmdx_c_scale,w_1200.png" 
             alt="Hero Product Case"
             sizes="(max-width: 768px) 90vw, (max-width: 1200px) 70vw, 1200px" 
-            srcset="
-              images/hero-product-case_npsmdx_c_scale,w_412.png 412w,
+            srcset="images/hero-product-case_npsmdx_c_scale,w_412.png 412w,
               images/hero-product-case_npsmdx_c_scale,w_765.png 765w, 
               images/hero-product-case_npsmdx_c_scale,w_1039.png 1039w,
-              images/hero-product-case_npsmdx_c_scale,w_1200.png 1200w
-            ">
+              images/hero-product-case_npsmdx_c_scale,w_1200.png 1200w">
         </div>
       </div>
     </section>
 
     <section id="features">
+    <h2 class="hidden">Product Features</h2>
       <div id="features-wrapper">
 
         <div id="features-con"> 
         <div class="feature-cards">
           <img src="images/feature-1.png" alt="Interactive Touch Feature">
-          <h2>Touch Interface</h2>
+          <h3>Touch Interface</h3>
           <p>LiveBuds is certified by Hi-Res Audio Wireless and supports Sony's LDAC audio codec at transmission speeds of up to 990kbps
           </p>
         </div>
         <div class="feature-cards">
           <img src="images/feature-2.png" alt="Wireless Feature">
-          <h2>Hi-Res Audio Wireless</h2>
+          <h3>Hi-Res Audio Wireless</h3>
           <p>LiveBuds is certified by Hi-Res Audio Wireless and supports Sony's LDAC audio codec at transmission speeds of up to 990kbps
           </p>
         </div>
         <div class="feature-cards">
           <img src="images/feature-3.png" alt="Battery Life">
-          <h2>Up to 38 hours long</h2>
+          <h3>Up to 38 hours long</h3>
           <p>Supports wireless charging and dual-device connection
           </p>
         </div>
         <div class="feature-cards">
           <img src="images/feature-4.png" alt="Driver Parts">
-          <h2>11mm Balance Driver</h2>
+          <h3>11mm Balance Driver</h3>
           <p>The optimised design of the centring disk allows the earbuds to deliver a live-like acoustic experience.
           </p>
         </div>
       </div>
       </div>
-      
-
-
     </section>
     
-
-
     <section id="explode-animation">
+    <h2 class="hidden">Explode Animation</h2>
       <div class="col-span-full">
         <canvas id="explode-view"></canvas> 
       </div>
     </section>
-    
-      <section id="model-3d">
+  
+    <section id="model-3d">
+    <h2 class="hidden">3d Model Viewer</h2>
       <div id="model-wrapper">
 
         <div id="model-info">
-          <h2>Explore Features</h2>
+          <h3>Explore Features</h3>
           <p>Design and Craftsmanship: <br>Showcasing the beauty of cutting-edge technology</p>
         </div>
-      <!-- <model-viewer> HTML element -->
+
         <model-viewer id="model" src="model/earbud-model.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="0.73" exposure="0.83">
 
           <button class="Hotspot" slot="hotspot-1" data-position="0.005841734626967465m 0.24m 0.19796179910924638m" data-normal="2.4492937051703357e-16m 3.126511277583096e-39m 1m" data-visibility-attribute="visible">
-          <div id="hotspot-1" class="HotspotAnnotation"></div>
+          <span id="hotspot-1" class="HotspotAnnotation"></span>
         </button>
           
           <button class="Hotspot" slot="hotspot-2" data-position="-0.19168639993258374m 0.1943081765013318m 0.10404273213968884m" data-normal="-0.8667368531509941m -0.4987645731857501m -0.0010620380164685075m" data-visibility-attribute="visible">
-              <div id="hotspot-2" class="HotspotAnnotation"></div>
+              <span id="hotspot-2" class="HotspotAnnotation"></span>
             </button>
           
           <button class="Hotspot" slot="hotspot-3" data-position="0.13127696077112933m 0.3187511145044424m -0.0022176994731852306m" data-normal="0.8664629547992987m -0.49922953913991197m -0.0034373260857274972m" data-visibility-attribute="visible">
-              <div id="hotspot-3"  class="HotspotAnnotation"></div>
+              <span id="hotspot-3"  class="HotspotAnnotation"></span>
           </button>
           
           <button class="Hotspot" slot="hotspot-4" data-position="0.0599942524326173m 0.27431610424426506m -0.639528814415697m" data-normal="-0.36749885875242266m -0.617690203318525m -0.6952721780281348m" data-visibility-attribute="visible">
-              <div id="hotspot-4"  class="HotspotAnnotation"></div>
+              <span id="hotspot-4"  class="HotspotAnnotation"></span>
           </button>
           
           <button class="Hotspot" slot="hotspot-5" data-position="-0.3319212151414095m 0.16065243493679787m -0.4091413558267874m" data-normal="-0.9670363678087703m -0.24116524053875366m -0.08173120634803918m" data-visibility-attribute="visible">
-              <div id="hotspot-5"  class="HotspotAnnotation"></div>
+              <span id="hotspot-5"  class="HotspotAnnotation"></span>
           </button>
 
 
@@ -150,32 +148,34 @@
               View in your space
           </button>
           <div id="ar-prompt">
-              <img src="ar_hand_prompt.png">
+              <img src="ar_hand_prompt.png" alt="AR hand icon">
           </div>
         </model-viewer>  
 
         <div id="mobile-info">
-          <img src="images/mobile-infos.jpg" alt="Mobile Info"/>
+          <img src="images/mobile-infos.jpg" alt="Mobile Info">
         </div>
 
       </div>
       </section>
 
       <section>
+      <h2 class="hidden">Audio Feature</h2>
       <div id="feature-sound">
         <img src="images/feature-5.png" alt="Sound Waves Visual">
-        <h2>Up to 48dB Deep Noise Cancellation</h2>
+        <h3>Up to 48dB Deep Noise Cancellation</h3>
         <p>The earbuds bring you instant quiet, even when in a noisy city, metro station or airport.
         </p>
       </div>
     </section>
 
-      <section id="xray-section">
+    <section id="xray-section">
+    <h2 class="hidden">Xray Comparison Slider</h2>
         <div id="xray-wrapper" class="grid-con">
           <div class="col-span-full">
-            <section id="mobile-tablet-view">
+            <div id="mobile-tablet-view">
                 <img src="images/xray-slash.jpg" alt="X-ray view of earbud">
-            </section>
+            </div>
 
             <div id="comparison-con">
                 <div id="xray">
@@ -188,11 +188,12 @@
       </section>
 
       
-      <section id="color-product" class="grid-con">
+    <section id="color-product" class="grid-con">
+      <h2 class="hidden">Color Selector</h2>
         <div id="color-info">
-          <h2>Select Your Style</h2>
+          <h3>Select Your Style</h3>
           <p>Sleek designs crafted to elevate your workspace.</p>
-          <section id="color-buttons">
+          <div id="color-buttons">
             <div class="color-option">
               <button id="white"></button>
               <p>Cosmic Pearl</p>
@@ -201,7 +202,7 @@
               <button id="black"></button>
               <p>Space Black</p>
             </div>
-          </section>
+          </div>
         </div>
         <div id="color-image">
           <img src="images/product-black.jpg" id="ear-buds" alt="Earbuds">
@@ -209,7 +210,8 @@
       </section>
       
 
-      <section class="full-width-grid-con">
+      <section>
+      <h2 class="hidden">Footer Promo</h2>
         <div id="footer-promo">
           <img src="images/footer-promo.jpg" alt="Footer Promo Image">
         </div>
@@ -220,7 +222,8 @@
       </section>
 
 
-      <footer class="footer grid-con">
+      <footer class="footer">
+      <h2 class="hidden">Footer Section</h2>
 
         <div id="footer-logo">
           <a href="#"><img src="images/sony-logo-white.svg" alt="Sony Logo White"></a>
@@ -228,7 +231,7 @@
       
         <div class="footer__nav">
           <div class="footer__quick-nav">
-            <h2>Quick Navigation</h2>
+            <h3>Quick Navigation</h3>
             <ul class="footer__nav-list">
               <li><a href="#">Home</a></li>
               <li><a href="#">Products</a></li>
@@ -238,7 +241,7 @@
           </div>
       
           <div class="footer__addr">
-            <h2>Consumer Electronics</h2>
+            <h3>Consumer Electronics</h3>
             <ul class="footer__nav-list">
               <li><a href="#">About Sony</a></li>
               <li><a href="#">Accessibility</a></li>
@@ -249,7 +252,7 @@
           </div>
       
           <div class="footer__addr">
-            <h2>Professional Products &amp; Solutions</h2>
+            <h3>Professional Products &amp; Solutions</h3>
             <ul class="footer__nav-list">
               <li><a href="#">Technology</a></li>
               <li><a href="#">Events</a></li>
@@ -260,7 +263,7 @@
           </div>
       
           <div class="footer__social">
-            <h2>Follow Us</h2>
+            <h3>Follow Us</h3>
             <ul class="footer__social-links">
               <li><a href="#">Pinterest</a></li>
               <li><a href="#">Twitter</a></li>
@@ -278,9 +281,6 @@
       </footer>
       
 
-
-   
-      <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
