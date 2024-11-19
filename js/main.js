@@ -1,6 +1,5 @@
 (() => {
 
-  (() => {
     // color selector 
     const earbuds = document.querySelector("#ear-buds");
     const buttons = document.querySelectorAll("#color-buttons button");
@@ -13,7 +12,7 @@
     buttons.forEach(button => {
       button.addEventListener("click", swapColor);
     });
-  })();
+
   
   // xray
   const divisor = document.querySelector("#divisor");
@@ -101,7 +100,7 @@
     scrollTrigger: {
       trigger: "#explode-view",
       pin: true,
-      scrub: 30,
+      scrub: 5,
       markers: false,
       start: "top top",
       end: `+=${frameCount * 5}px`,
